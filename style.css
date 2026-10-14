@@ -1,0 +1,122 @@
+:root{
+    --bg : #000;
+    --green: #00ff9c;
+    --dim: #0a8f5c;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+section{
+    padding: 50px 15px;
+    text-align: center;
+}
+
+body{
+    background: var(--bg);
+    color: var(--dim);
+    font-family: "JetBrains Mono",monospace,"press start 2p";
+    background-image: url(images/wallpapersden.com_money-heist-mask_3000x1900.jpg);
+    background-repeat: no-repeat;
+    background-position: auto;
+}
+
+#Hero{
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+#Title{
+    font-family: "press start 2p",monospace,sans-serif;
+
+}
+
+.btn{
+    display: inline-block;
+    padding: 16px 28px;
+    margin-top: 24px;
+    color: var(--green);
+    border: 2px solid var(--green);
+    font-size: 1.0rem;
+    transition: all 0.25s ease-in-out;
+    max-width: 100%;
+}
+
+.btn:hover{
+ background-color: green;
+ color: var(--bg);
+ box-shadow: 0 0 20px var(--green);
+ transform: translateY(-3px);
+}
+
+.btn:active{
+    transform: translateY(0);
+}
+
+.about-wrap{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-wrap img{
+    width: 100%;
+    height: auto;
+    border: 2px solid var(--green);
+}
+
+@media screen and (min-width: 768px){
+    .about-wrap{
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+#final-cta{
+    text-align: center;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card{
+    width: 250px;
+    max-width: 100%;
+    padding: 21px;
+    border: 2px solid var(--dim);
+}
+
+.card h3{
+    color: var(--green);
+    font-size: 1.4rem;
+}
+
+.card p{
+    font-size: 1.0rem;
+}
+
+.card:hover{
+    border-color: var(--green);
+    background-color: var(--dim);
+    color: var(--green);
+    box-shadow: 0 0 20px var(--green);
+    transform: translateY(-3px);
+    transition: all 0.25s ease-in-out;
+}
+
+
+
