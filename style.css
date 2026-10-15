@@ -2,9 +2,10 @@
     --bg : #000;
     --green: #00ff9c;
     --dim: #0a8f5c;
+    --grid: rgba(0, 255, 156, 0.08);
 }
 
-*{
+*,*::before,*::after{
     box-sizing: border-box;
 }
 
@@ -17,9 +18,13 @@ body{
     background: var(--bg);
     color: var(--dim);
     font-family: "JetBrains Mono",monospace,"press start 2p";
-    background-image: url(images/wallpapersden.com_money-heist-mask_3000x1900.jpg);
-    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    background-image:
+    linear-gradient(to right, var(--grid) 1px, var(--grid) 1px),
+    linear-gradient(to bottom, var(--grid) 1px, var(--bg) 1px);
+    background-repeat: repeat;
     background-position: auto;
+    max-width: 100%;
 }
 
 #Hero{
@@ -118,5 +123,21 @@ body{
     transition: all 0.25s ease-in-out;
 }
 
+.detail{
+    margin: 2em 0;
+    border: 2px solid var(--dim);
+    padding: 1em;
+    display: block;
+    max-width: 100%;
+}
+
+.detail:hover{
+    border-color: var(--green);
+    background-color: var(--dim);
+    color: var(--green);
+    box-shadow: 0 0 20px var(--green);
+    transform: translateY(-3px);
+    transition: all 0.25s ease-in-out;
+}
 
 
